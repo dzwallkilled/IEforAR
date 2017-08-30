@@ -6,6 +6,8 @@ All the codes used are released.
 
 The codes have not been well organized and commented.
 
+The main file is "main_NTU.m".
+
 Feel free to contact us for mroe information.
 
 
