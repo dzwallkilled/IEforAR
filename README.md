@@ -12,7 +12,7 @@ Feel free to contact us for mroe information.
 
 
 
-The paper:
+The paper: 
 @article{ding2017investigation,
   title={Investigation of Different Skeleton Features for CNN-based 3D Action Recognition},  
   author={Ding, Zewei and Wang, Pichao and Ogunbona, Philip O and Li, Wanqing},  
