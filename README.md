@@ -1,4 +1,4 @@
-# Investigation of Different Skeleton Features for CNN-based 3D Action Recognition
+# Image Encoding for CNN-based 3D Action Recognition
 The source codes for ICME2017 Competition paper ["Investigation of Different Skeleton Features for CNN-based 3D Action Recognition"- Zewei et al.](https://arxiv.org/abs/1705.00835).
 
 
