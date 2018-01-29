@@ -7,6 +7,8 @@ All the codes used are released.
 The codes have not been well organized and commented.
 
 The main file is "main_NTU.m".
+The files "transform_*" refer to the color-encoding methods.
+The files "extract_*" refer to the spatial features.
 
 Feel free to contact us for mroe information.
 
