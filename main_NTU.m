@@ -3,7 +3,10 @@ clear
 close all
 tic
 
-Thread = 6; %Open multi matlab apps to parallel run the preprocessing
+%Open multi matlab apps to parallel run the preprocessing
+% Thread = 1, 2, 3, 4, 5, 6
+% each thread processes 10,000 samples in parallel
+Thread = 6; 
 image_folder = './Images/ComT05/'; % the folder to store result images
 global cb % colorbar
 cb = get_colorbar(256); 
