@@ -42,7 +42,6 @@ set(h,'CloseRequestFcn','closereq');
 %% do the image encoding
 for i = num1(Thread).n
     %read the skeleton data using the provided code along with the dataset
-    % the reading function is provided along with NTU dataset
     skeleton_data = read_skeleton_file([data_folder skeleton_file_list(i,17:20) '/' skeleton_file_list(i,:)]);
     % do some preprocessing to the skeleton data
     % including normalization and dimension tranpose
