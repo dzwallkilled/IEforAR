@@ -20,6 +20,13 @@ len = length(skeleton_file_list);
 
 % for storage stablility consideration, the folder is divided into 60
 % subfolders corresponding with number of classes
+% 
+% ./nturgb+d_skeletons/
+%    A001/ S001C001P001R001A001.skeleton ...
+%    A002/ S001C001P001R001A002.skeleton ...
+%    ...
+%    A060/ *
+   
 for i = 1:60
    sub_img_folder = ['A0' num2str(floor(i/10)) num2str(mod(i,10)) '/']; 
    mkdir([image_folder sub_img_folder]);
@@ -27,8 +34,8 @@ end
 
 
 %% setup the display messages
-num1 = [];
 % for each thread, there is a message displayed
+num1 = [];
 for t = 1:5
     num1(t).n = (t-1)*10000+1:t*10000;
 end
