@@ -5,13 +5,14 @@ tic
 
 Thread = 6; %Open multi matlab apps to parallel run the preprocessing
 image_folder = './Images/ComT05/'; % the folder to store result images
-global cb
-cb = get_colorbar(256); % colorbar
+global cb % colorbar
+cb = get_colorbar(256); 
 
 
 data_folder = './nturgb+d_skeletons/'; % the folder of skeleton data
-load skeleton_file_list.mat %for convenience, the skeleton_file_list has been saved into mat
+% for convenience, the skeleton_file_list has been saved into mat
 % and is loaded when using
+load skeleton_file_list.mat 
 len = length(skeleton_file_list);
 
 % for storage stablility consideration, the folder is divided into 60
@@ -24,6 +25,7 @@ end
 
 %% setup the display messages
 num1 = [];
+% for each thread, there is a message displayed
 for t = 1:5
     num1(t).n = (t-1)*10000+1:t*10000;
 end
@@ -37,8 +39,10 @@ set(h,'CloseRequestFcn','closereq');
 %% do the image encoding
 for i = num1(Thread).n
     %read the skeleton data using the provided code along with the dataset
+    % the reading function is provided along with NTU dataset
     skeleton_data = read_skeleton_file([data_folder skeleton_file_list(i,17:20) '/' skeleton_file_list(i,:)]);
     % do some preprocessing to the skeleton data
+    % including normalization and dimension tranpose
     [skeleton_data, ~] = preprocess_skeleton_data(skeleton_data); 
     % extract the features
     features = extract_feature_com(skeleton_data);
